@@ -56,11 +56,19 @@ button:hover {
 
 #leaderboards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-#donationLeaderboard, #upcyclingLeaderboard {
-    width: 48%;
+#donationLeaderboard, #upcyclingLeaderboard, #rewardsLeaderboard {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    #donationLeaderboard, #upcyclingLeaderboard, #rewardsLeaderboard {
+        width: 31%;
+    }
 }
 
 ol {

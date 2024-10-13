@@ -35,6 +35,14 @@
                 <button type="submit">Log Upcycled</button>
             </form>
         </section>
+        <section id="wearingUsed">
+            <h2>Log Wearing Used Jerseys</h2>
+            <form id="wearingUsedForm">
+                <input type="text" id="wearingUsedTeamId" placeholder="Team ID" required>
+                <input type="number" id="wearingUsedCount" placeholder="Number of Jerseys" required min="1">
+                <button type="submit">Log Wearing Used</button>
+            </form>
+        </section>
         <section id="leaderboards">
             <h2>Leaderboards</h2>
             <div id="donationLeaderboard">
@@ -44,6 +52,10 @@
             <div id="upcyclingLeaderboard">
                 <h3>Top Upcycling Teams</h3>
                 <ol id="upcyclingList"></ol>
+            </div>
+            <div id="rewardsLeaderboard">
+                <h3>Top Rewarded Teams</h3>
+                <ol id="rewardsList"></ol>
             </div>
         </section>
     </main>

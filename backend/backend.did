@@ -3,6 +3,7 @@ type Team =
  record {
    donatedJerseys: nat;
    name: text;
+   rewardPoints: nat;
    upcycledJerseys: nat;
  };
 service : {
@@ -15,11 +16,16 @@ service : {
                                        TeamId;
                                        Team;
                                      }) query;
+  getTopRewardedTeams: (nat) -> (vec record {
+                                       TeamId;
+                                       Team;
+                                     }) query;
   getTopUpcyclingTeams: (nat) -> (vec record {
                                         TeamId;
                                         Team;
                                       }) query;
   logDonation: (TeamId, nat) -> ();
   logUpcycled: (TeamId, nat) -> ();
+  logWearingUsedJersey: (TeamId, nat) -> ();
   registerTeam: (TeamId, text) -> ();
 }
