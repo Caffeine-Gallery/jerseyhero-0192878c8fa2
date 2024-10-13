@@ -1,0 +1,25 @@
+type TeamId = text;
+type Team = 
+ record {
+   donatedJerseys: nat;
+   name: text;
+   upcycledJerseys: nat;
+ };
+service : {
+  getAllTeams: () -> (vec record {
+                            TeamId;
+                            Team;
+                          }) query;
+  getTeam: (TeamId) -> (opt Team) query;
+  getTopDonatingTeams: (nat) -> (vec record {
+                                       TeamId;
+                                       Team;
+                                     }) query;
+  getTopUpcyclingTeams: (nat) -> (vec record {
+                                        TeamId;
+                                        Team;
+                                      }) query;
+  logDonation: (TeamId, nat) -> ();
+  logUpcycled: (TeamId, nat) -> ();
+  registerTeam: (TeamId, text) -> ();
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Jersey Recycling Program</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Soccer Jersey Recycling Program</h1>
+    </header>
+    <main>
+        <section id="registration">
+            <h2>Team Registration</h2>
+            <form id="registerForm">
+                <input type="text" id="teamId" placeholder="Team ID" required>
+                <input type="text" id="teamName" placeholder="Team Name" required>
+                <button type="submit">Register Team</button>
+            </form>
+        </section>
+        <section id="donation">
+            <h2>Log Jersey Donation</h2>
+            <form id="donationForm">
+                <input type="text" id="donationTeamId" placeholder="Team ID" required>
+                <input type="number" id="donationCount" placeholder="Number of Jerseys" required min="1">
+                <button type="submit">Log Donation</button>
+            </form>
+        </section>
+        <section id="upcycling">
+            <h2>Log Upcycled Jerseys</h2>
+            <form id="upcyclingForm">
+                <input type="text" id="upcyclingTeamId" placeholder="Team ID" required>
+                <input type="number" id="upcyclingCount" placeholder="Number of Jerseys" required min="1">
+                <button type="submit">Log Upcycled</button>
+            </form>
+        </section>
+        <section id="leaderboards">
+            <h2>Leaderboards</h2>
+            <div id="donationLeaderboard">
+                <h3>Top Donating Teams</h3>
+                <ol id="donationList"></ol>
+            </div>
+            <div id="upcyclingLeaderboard">
+                <h3>Top Upcycling Teams</h3>
+                <ol id="upcyclingList"></ol>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
